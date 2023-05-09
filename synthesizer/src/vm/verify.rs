@@ -249,6 +249,7 @@ mod tests {
          let rng = &mut TestRng::default();
         let vm = crate::vm::test_helpers::sample_vm_with_genesis_block(rng);
 
+
         // Fetch a deployment transaction.
         let deployment_transaction = crate::vm::test_helpers::sample_deployment_transaction(rng);
         // Ensure the transaction verifies.
