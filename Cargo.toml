@@ -247,13 +247,13 @@ incremental = true
 debug-assertions = false
 
 [profile.dev]
-opt-level = 3
-lto = "thin"
-incremental = true
+opt-level = 1
+lto = "off"
+debug = false
+strip = "symbols"
 
 [profile.test]
-opt-level = 3
-lto = "thin"
-incremental = true
-debug = true
-debug-assertions = true
+opt-level = 1
+lto = "off"
+debug = false
+strip = "symbols"

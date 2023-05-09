@@ -245,8 +245,8 @@ mod tests {
     type CurrentNetwork = test_helpers::CurrentNetwork;
 
     #[test]
-    fn test_verify() {
-        let rng = &mut TestRng::default();
+    fn test_verify1() {
+         let rng = &mut TestRng::default();
         let vm = crate::vm::test_helpers::sample_vm_with_genesis_block(rng);
 
         // Fetch a deployment transaction.
@@ -259,7 +259,7 @@ mod tests {
         let execution_transaction = crate::vm::test_helpers::sample_execution_transaction_with_fee(rng);
         // Ensure the transaction verifies.
         assert!(vm.check_transaction(&execution_transaction).is_ok());
-        assert!(vm.verify_transaction(&execution_transaction));
+        assert!(vm.verify_transaction(&execution_transaction)); 
     }
 
     #[test]
