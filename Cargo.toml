@@ -246,11 +246,10 @@ debug-assertions = false
 [profile.dev]
 opt-level = 1
 lto = "off"
-debug = false
-strip = "symbols"
+debug = true
 
 [profile.test]
 opt-level = 1
 lto = "off"
-debug = false
-strip = "symbols"
+debug = true
+
